@@ -23,7 +23,8 @@ for i in range(epochs):
 print(f'Готовая прямая y = {A} * X')
 
 # поле x_data не используется??
-def func_data(x_data):
+#def func_data(x_data):
+def func_data():
     # если эта функция возвращает новый массив копирующий arr_y то можно сократить
     #return [arr_y[i] for i in range(len(arr_y))]
     return arr_y.copy()
@@ -62,8 +63,8 @@ while True:
     из моей библиотеки common_lib они не вернут управление пока не будут
     введены корректные данные'''
     user_x = read_float_from_console("Введите значение ширины X: ")
-    user_T = read_float_from_console("Введите значение длины Y: ")
-    user_y = A * user_T
+    user_T = read_float_from_console("Введите значение высоты Y: ")
+    user_y = A * user_x
     if user_T > user_y:
         print("Это жираф!")
     else:
